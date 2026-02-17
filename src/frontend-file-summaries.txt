@@ -1,0 +1,20 @@
+{
+  "frontend/src/index.css": "Global styles with OKLCH color system defining a premium dark/neutral theme with warm amber/gold accents for both light and dark modes, plus typography and animation utilities.",
+  "frontend/tailwind.config.js": "Tailwind configuration extending the theme with custom fonts, colors mapped to OKLCH tokens, border radii, shadows (including glow effect), and custom animations.",
+  "frontend/src/App.tsx": "Main application component setting up ThemeProvider, TanStack Router with Layout wrapper containing header/footer, and routes for landing page and inquiries page.",
+  "frontend/src/pages/LandingPage.tsx": "Landing page composition including the new CatalogSection between Services and Portfolio sections.",
+  "frontend/src/pages/InquiriesPage.tsx": "Internal inquiries page displaying all contact form submissions in a responsive table/card layout with loading, error, and empty states.",
+  "frontend/src/components/site/SiteHeader.tsx": "Site header with navigation including new Products link to catalog section and integrated cart button with item count badge, visible on both desktop and mobile.",
+  "frontend/src/components/site/SiteFooter.tsx": "Footer with company info, contact details, social links, copyright, and caffeine.ai attribution with UTM tracking.",
+  "frontend/src/components/sections/HeroSection.tsx": "Hero section with background image overlay, headline, subheadline, and CTAs that scroll to contact and portfolio sections.",
+  "frontend/src/components/sections/ServicesSection.tsx": "Services section displaying six service cards (recording, mixing, mastering, sound design, podcast, music production) in a responsive grid with valid lucide-react icons.",
+  "frontend/src/components/sections/PortfolioSection.tsx": "Portfolio section showcasing three example projects with descriptions and HTML5 audio players for sample playback.",
+  "frontend/src/components/sections/AboutSection.tsx": "About section with studio highlights (years, projects, equipment) and descriptive copy about the studio's approach and philosophy.",
+  "frontend/src/components/sections/ContactSection.tsx": "Contact form section with validated inputs (name, email, message), submission handling via React Query mutation, and success state display.",
+  "frontend/src/hooks/useSubmitContact.ts": "React Query mutation hook for submitting contact form data with validation, backend actor integration, toast notifications, and query invalidation.",
+  "frontend/src/hooks/useInquiries.ts": "React Query hook for fetching all contact inquiries from the backend with proper actor initialization checks.",
+  "frontend/src/data/products.ts": "Product data configuration defining the three products (Cable marking stickers, XLR cables, Used musical instruments) with optional pricing to support price unavailable scenarios.",
+  "frontend/src/hooks/useCart.ts": "Zustand-based cart state management hook with persistent storage, supporting add/remove/update operations and safe total calculation that handles missing prices without NaN errors.",
+  "frontend/src/components/sections/CatalogSection.tsx": "Product catalog section displaying all three products in a responsive grid with add-to-cart functionality and clear price unavailable messaging.",
+  "frontend/src/components/cart/CartSheet.tsx": "Shopping cart UI component using Sheet/drawer pattern with quantity controls, item removal, total calculation, and clear handling of products with unavailable prices."
+}

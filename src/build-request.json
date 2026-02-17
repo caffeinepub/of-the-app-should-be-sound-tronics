@@ -1,0 +1,55 @@
+{
+  "kind": "build_request",
+  "title": "Update product showcase catalog for cart",
+  "projectName": "SoundCraft Audio",
+  "priority": "normal",
+  "requirements": [
+    {
+      "id": "REQ-7",
+      "text": "Update the product showcase/catalog to include the following products: cable marking stickers, XLR cables, and used musical instruments.",
+      "target": "frontend",
+      "source": {
+        "messageIds": [
+          "msg-recent-4"
+        ],
+        "quotes": [
+          "the products are cable marking stickers, xlc cables used musical instrument,"
+        ]
+      },
+      "acceptanceCriteria": [
+        "The product list displayed on the site includes items named \"Cable marking stickers\", \"XLR cables\", and \"Used musical instruments\" (spelling corrected to XLR).",
+        "Each of the three products is visible in the product showcase UI without layout regressions on mobile and desktop."
+      ]
+    },
+    {
+      "id": "REQ-8",
+      "text": "Ensure the existing Add to Cart flow works for the newly listed products, including handling missing product prices gracefully if prices are not configured.",
+      "target": "frontend",
+      "source": {
+        "messageIds": [
+          "msg-recent-4"
+        ],
+        "quotes": [
+          "the products are cable marking stickers, xlc cables used musical instrument,"
+        ]
+      },
+      "acceptanceCriteria": [
+        "Visitors can add and remove each of the three new products to/from the cart using the existing cart UI.",
+        "If a product has no configured price, the UI clearly indicates that the price is unavailable (English text) and the cart does not break (no NaN/undefined totals or crashes)."
+      ]
+    }
+  ],
+  "constraints": [
+    "Do not modify files under frontend/src/components/ui or other immutable paths listed in SYSTEM_CONTEXT.",
+    "Backend must remain a single Motoko actor (all logic in backend/main.mo); do not introduce additional backend services."
+  ],
+  "nonGoals": [
+    "Implementing payments/checkout processing.",
+    "Adding external databases or third-party commerce integrations.",
+    "Building inventory management or admin product management UI."
+  ],
+  "imageRequirements": {
+    "required": [],
+    "edits": []
+  }
+}

@@ -1,0 +1,68 @@
+{
+  "kind": "coverage_report",
+  "version": "1.0",
+  "generatedAt": "2026-02-17T04:04:39.671Z",
+  "sources": {
+    "buildRequest": true,
+    "implementationPlan": true
+  },
+  "requirements": {
+    "total": 2,
+    "implemented": 2,
+    "items": [
+      {
+        "id": "REQ-7",
+        "summary": "Update the product showcase/catalog to include the following products: cable marking stickers, XLR cables, and used musical instruments.",
+        "status": "implemented",
+        "plannedFiles": [
+          "frontend/src/components/sections/CatalogSection.tsx",
+          "frontend/src/data/products.ts",
+          "frontend/src/pages/LandingPage.tsx",
+          "frontend/src/components/site/SiteHeader.tsx"
+        ],
+        "matchedFiles": [
+          "frontend/src/components/sections/CatalogSection.tsx",
+          "frontend/src/data/products.ts",
+          "frontend/src/pages/LandingPage.tsx",
+          "frontend/src/components/site/SiteHeader.tsx"
+        ]
+      },
+      {
+        "id": "REQ-8",
+        "summary": "Ensure the existing Add to Cart flow works for the newly listed products, including handling missing product prices gracefully if prices are not configured.",
+        "status": "implemented",
+        "plannedFiles": [
+          "frontend/src/hooks/useCart.ts",
+          "frontend/src/components/cart/CartSheet.tsx",
+          "frontend/src/components/sections/CatalogSection.tsx",
+          "frontend/src/components/site/SiteHeader.tsx",
+          "frontend/src/data/products.ts"
+        ],
+        "matchedFiles": [
+          "frontend/src/hooks/useCart.ts",
+          "frontend/src/components/cart/CartSheet.tsx",
+          "frontend/src/components/sections/CatalogSection.tsx",
+          "frontend/src/components/site/SiteHeader.tsx",
+          "frontend/src/data/products.ts"
+        ]
+      }
+    ]
+  },
+  "changedFiles": [
+    "build-request.json",
+    "build-template/README.md",
+    "feature_evidence.json",
+    "frontend-file-summaries.txt",
+    "frontend-implementation-plan.json",
+    "frontend/src/components/cart/CartSheet.tsx",
+    "frontend/src/components/sections/CatalogSection.tsx",
+    "frontend/src/components/site/SiteHeader.tsx",
+    "frontend/src/data/products.ts",
+    "frontend/src/hooks/useCart.ts",
+    "frontend/src/pages/LandingPage.tsx",
+    "project_state.json",
+    "scratch/component-selection.json",
+    "spec.md",
+    "spec_vs_diff_report.json"
+  ]
+}

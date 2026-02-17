@@ -1,0 +1,48 @@
+{
+  "kind": "feature_evidence_report",
+  "features": [
+    {
+      "featureId": "feature-update-the-product-showcase-catalog-to-include-the-following-products-cable-marking-stickers-xlr-cables-and-used-musical-instruments",
+      "featureTitle": "Update the product showcase/catalog to include the following products: cable marking stickers, XLR cables, and used musical instruments.",
+      "files": [
+        "frontend/src/components/sections/CatalogSection.tsx",
+        "frontend/src/components/site/SiteHeader.tsx",
+        "frontend/src/data/products.ts",
+        "frontend/src/pages/LandingPage.tsx"
+      ],
+      "components": [
+        "core-infrastructure@1.0.2",
+        "shadcn-ui@1.0.0",
+        "build-template-react@1.0.0",
+        "initial-app@1.0.0",
+        "github-export-icp-cli@1.0.0"
+      ],
+      "testIds": [
+        "REQ-7"
+      ],
+      "confidence": "high"
+    },
+    {
+      "featureId": "feature-ensure-the-existing-add-to-cart-flow-works-for-the-newly-listed-products-including-handling-missing-product-prices-gracefully-if-prices-are-not-configured",
+      "featureTitle": "Ensure the existing Add to Cart flow works for the newly listed products, including handling missing product prices gracefully if prices are not configured.",
+      "files": [
+        "frontend/src/components/cart/CartSheet.tsx",
+        "frontend/src/components/sections/CatalogSection.tsx",
+        "frontend/src/components/site/SiteHeader.tsx",
+        "frontend/src/data/products.ts",
+        "frontend/src/hooks/useCart.ts"
+      ],
+      "components": [
+        "core-infrastructure@1.0.2",
+        "shadcn-ui@1.0.0",
+        "build-template-react@1.0.0",
+        "initial-app@1.0.0",
+        "github-export-icp-cli@1.0.0"
+      ],
+      "testIds": [
+        "REQ-8"
+      ],
+      "confidence": "high"
+    }
+  ]
+}

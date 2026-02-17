@@ -1,2 +1,3 @@
-# of-the-app-should-be-sound-tronics
-Exported from Caffeine project: of the app should be SOUND-TRONICS
+## 
+
+To run app build and run docker image: `docker build -t app . docker run -it --network host app`

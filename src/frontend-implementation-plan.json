@@ -1,0 +1,72 @@
+{
+  "kind": "implementation_plan",
+  "version": "1.0",
+  "title": "SoundCraft Audio — Product catalog updates + cart robustness",
+  "requirements": [
+    {
+      "id": "REQ-7",
+      "summary": "Add the three requested products to the product showcase/catalog UI (Cable marking stickers, XLR cables, Used musical instruments).",
+      "acceptanceCriteria": [
+        "The product list displayed on the site includes items named \"Cable marking stickers\", \"XLR cables\", and \"Used musical instruments\" (spelling corrected to XLR).",
+        "Each of the three products is visible in the product showcase UI without layout regressions on mobile and desktop."
+      ],
+      "file_operations": [
+        {
+          "path": "frontend/src/components/sections/CatalogSection.tsx",
+          "operation": "create",
+          "description": "Create a dedicated catalog/product showcase section that renders a responsive grid of product cards, including the three new products. Use shadcn-ui Card/Button styling patterns to match the existing design system. Verify the component's usage instructions before implementing."
+        },
+        {
+          "path": "frontend/src/data/products.ts",
+          "operation": "create",
+          "description": "Add a small, frontend-owned product list/config used by the catalog section, including names \"Cable marking stickers\", \"XLR cables\", and \"Used musical instruments\" (and any optional display details such as description, image reference, and optional price)."
+        },
+        {
+          "path": "frontend/src/pages/LandingPage.tsx",
+          "operation": "modify",
+          "description": "Wire the new CatalogSection into the landing page composition (no new top-level routes), ensuring it is placed in a visible location and uses a stable section id for navigation."
+        },
+        {
+          "path": "frontend/src/components/site/SiteHeader.tsx",
+          "operation": "modify",
+          "description": "Add a navigation item that scrolls to the catalog section (anchor-style behavior consistent with existing header navigation). Ensure the new section is discoverable without adding new routes."
+        }
+      ]
+    },
+    {
+      "id": "REQ-8",
+      "summary": "Ensure the existing Add to Cart flow supports the three new products and handles missing prices without breaking totals or UI.",
+      "acceptanceCriteria": [
+        "Visitors can add and remove each of the three new products to/from the cart using the existing cart UI.",
+        "If a product has no configured price, the UI clearly indicates that the price is unavailable (English text) and the cart does not break (no NaN/undefined totals or crashes)."
+      ],
+      "file_operations": [
+        {
+          "path": "frontend/src/hooks/useCart.ts",
+          "operation": "create",
+          "description": "Implement a lightweight cart state hook (and any supporting types) that supports add/remove/update quantity, computes totals safely, and treats missing prices as non-numeric (avoid NaN) while still allowing the item to be in the cart."
+        },
+        {
+          "path": "frontend/src/components/cart/CartSheet.tsx",
+          "operation": "create",
+          "description": "Create a cart UI surface (e.g., sheet/drawer) that lists cart items with add/remove controls, per-item price display that shows an English \"Price unavailable\" message when missing, and a total that never renders NaN/undefined. Use shadcn-ui Sheet/Button/Card (and similar) to align with existing UI. Verify the component's usage instructions before implementing."
+        },
+        {
+          "path": "frontend/src/components/sections/CatalogSection.tsx",
+          "operation": "modify",
+          "description": "Wire each product card's \"Add to Cart\" action to the cart hook so the three new products can be added/removed using the same cart behavior; ensure products with missing price clearly show \"Price unavailable\" in the catalog as well, without disabling the UI or breaking layout."
+        },
+        {
+          "path": "frontend/src/components/site/SiteHeader.tsx",
+          "operation": "modify",
+          "description": "Wire the cart UI into the existing header so users can open the cart and remove items; include a cart trigger/button that is visible on desktop and mobile. Use shadcn-ui Button/Sheet patterns. Verify the component's usage instructions before implementing."
+        },
+        {
+          "path": "frontend/src/data/products.ts",
+          "operation": "modify",
+          "description": "Allow product entries to omit price (optional/undefined) and ensure the new products are configured in a way that exercises the missing-price behavior (at least one item can have an unset price if prices are not configured) without breaking cart calculations."
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,92 @@
+{
+  "schemaVersion": "1.0.0",
+  "projectStateVersion": 5,
+  "summary": "Build a website for an audio business, expanded to include a product showcase with an Add to Cart feature for selling audio-related products.",
+  "architectural_notes": [],
+  "known_issues": [],
+  "isFixRequest": false,
+  "existing_features": [
+    {
+      "id": "feature-create-a-responsive-multi-section-marketing-website-for-an-audio-business-with-clear-navigation-and-content-sections-for-hero-services-portfolio-work-about-and-contact",
+      "title": "Create a responsive multi-section marketing website for an audio business with clear navigation and content sections for: Hero, Services, Portfolio/Work, About, and Contact.",
+      "reqIds": [
+        "REQ-1"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-implement-a-contact-form-that-collects-name-email-and-message-validate-inputs-on-the-client-and-submit-inquiries-to-the-backend-for-persistence",
+      "title": "Implement a Contact form that collects name, email, and message; validate inputs on the client; and submit inquiries to the backend for persistence.",
+      "reqIds": [
+        "REQ-2"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-add-a-simple-internal-inquiries-page-section-in-the-frontend-that-fetches-and-displays-submitted-contact-inquiries-from-the-backend",
+      "title": "Add a simple internal 'Inquiries' page/section in the frontend that fetches and displays submitted contact inquiries from the backend.",
+      "reqIds": [
+        "REQ-3"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-include-a-portfolio-work-section-that-can-showcase-at-least-3-example-projects-each-with-a-title-short-description-and-optional-embedded-audio-player-html5-audio-using-sample-audio-files-stored-as-static-assets",
+      "title": "Include a Portfolio/Work section that can showcase at least 3 example projects, each with a title, short description, and optional embedded audio player (HTML5 audio) using sample audio files stored as static assets.",
+      "reqIds": [
+        "REQ-4"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-define-and-apply-a-cohesive-visual-theme-suitable-for-a-premium-audio-business-colors-typography-spacing-and-component-styling-and-enforce-it-consistently-across-all-sections-and-pages-avoid-blue-purple-as-dominant-brand-colors",
+      "title": "Define and apply a cohesive visual theme suitable for a premium audio business (colors, typography, spacing, and component styling) and enforce it consistently across all sections and pages. Avoid blue/purple as dominant brand colors.",
+      "reqIds": [
+        "REQ-5"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-generate-and-include-static-image-assets-for-the-site-logo-and-hero-background-and-render-them-from-frontend-public-assets-generated",
+      "title": "Generate and include static image assets for the site (logo and hero background) and render them from frontend/public/assets/generated.",
+      "reqIds": [
+        "REQ-6"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-update-the-product-showcase-catalog-to-include-the-following-products-cable-marking-stickers-xlr-cables-and-used-musical-instruments",
+      "title": "Update the product showcase/catalog to include the following products: cable marking stickers, XLR cables, and used musical instruments.",
+      "reqIds": [
+        "REQ-7"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-ensure-the-existing-add-to-cart-flow-works-for-the-newly-listed-products-including-handling-missing-product-prices-gracefully-if-prices-are-not-configured",
+      "title": "Ensure the existing Add to Cart flow works for the newly listed products, including handling missing product prices gracefully if prices are not configured.",
+      "reqIds": [
+        "REQ-8"
+      ],
+      "version": 1
+    }
+  ],
+  "new_feature_requests": [
+    {
+      "id": "AR-1",
+      "summary": "Create a website for an audio business",
+      "reqIds": [],
+      "status": "pending"
+    },
+    {
+      "id": "AR-2",
+      "summary": "Add product showcase and simple Add to Cart cart flow for selected products (cable marking stickers, XLR cables, used musical instruments).",
+      "reqIds": [],
+      "status": "pending"
+    }
+  ],
+  "gameProjectType": "none",
+  "projectName": "SoundCraft Audio",
+  "clarification_mode": "instant",
+  "clarification_rounds": 0
+}
